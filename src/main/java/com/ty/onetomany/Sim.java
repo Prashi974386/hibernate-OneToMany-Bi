@@ -1,5 +1,6 @@
 package com.ty.onetomany;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,7 +16,7 @@ public class Sim {
 	private String provider;
 	private String type;
 	private long imei;
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn
 	private Mobile mobile;
 	public int getId() {

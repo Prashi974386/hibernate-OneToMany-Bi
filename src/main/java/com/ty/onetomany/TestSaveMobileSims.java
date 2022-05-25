@@ -37,7 +37,6 @@ public class TestSaveMobileSims {
 		mobile.setSim(list);
 		
 		entityTransaction.begin();
-		entityManager.persist(mobile);
 		entityManager.persist(sim1);
 		entityManager.persist(sim2);
 		entityTransaction.commit();
